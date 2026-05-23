@@ -1,5 +1,6 @@
 export type ProjectStatus =
   | "completed"
+  | "closed"
   | "under-construction"
   | "in-design"
   | "needs-confirmation";
