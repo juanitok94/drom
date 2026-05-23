@@ -111,47 +111,75 @@ export default function FieldGuideShell({ data }: Props) {
 
   return (
     <main className="min-h-screen bg-cream">
-      {/* Top header */}
+      {/* Header — humane: one breath, no noise */}
       <header className="border-b border-ink/10 paper-grain">
-        <div className="relative max-w-[1440px] mx-auto px-6 lg:px-10 py-7">
-          <div className="flex items-start justify-between gap-6 flex-wrap">
-            <div>
-              <p className="label-caps text-ember mb-2">
-                Field Guide · v{data.meta.version}
-              </p>
-              <h1 className="font-serif text-5xl md:text-6xl leading-[0.95] text-ink tracking-tight">
-                Dröm <span className="italic-accent text-ember">Field</span> Guide
-              </h1>
-              <p className="font-serif italic text-lg md:text-xl text-stone mt-3 max-w-[520px] leading-snug">
-                An interactive portfolio of spaces shaped by Dröm Construction across Asheville and Western North Carolina.
-              </p>
-            </div>
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-10">
 
-            <div className="flex flex-col items-end gap-3">
+          {/* Top utility bar — quiet, functional */}
+          <div className="flex items-center justify-between py-3 border-b border-ink/[0.06]">
+            <span className="label-caps text-stone text-[10px]">
+              Dröm Construction · Asheville, NC
+            </span>
+            <div className="flex items-center gap-3">
+              <span className={`inline-flex items-center gap-1.5 text-[11px] font-medium ${
+                mode === "internal" ? "text-charcoal" : "text-stone"
+              }`}>
+                <span className={`w-1.5 h-1.5 rounded-full ${
+                  mode === "internal" ? "bg-ember" : "bg-moss"
+                }`} />
+                {mode === "internal" ? "Team view" : "Guest view"}
+              </span>
               <ModeToggle mode={mode} onChange={setMode} />
-              <div className="flex items-center gap-2 text-[11px] text-stone label-caps">
-                <span>Last updated</span>
-                <span className="text-charcoal">{data.meta.last_updated}</span>
+            </div>
+          </div>
+
+          {/* Wordmark + live count */}
+          <div className="py-6 md:py-8">
+            <div className="flex items-end justify-between gap-4 flex-wrap">
+              <div>
+                <h1 className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] leading-[0.92] text-ink tracking-tight">
+                  Dröm <span className="italic-accent text-ember">Field</span> Guide
+                </h1>
+                <p className="mt-2.5 text-stone font-sans text-sm leading-snug">
+                  Built work across Asheville and{" "}
+                  <span className="italic-accent">Western North Carolina.</span>
+                </p>
+              </div>
+              <div className="text-right hidden sm:block">
+                <p className="font-serif text-5xl md:text-6xl leading-none text-ink">
+                  {filtered.length}
+                </p>
+                <p className="label-caps text-stone mt-1">
+                  {filtered.length === 1 ? "project" : "projects"}
+                  {activeFilter !== "all" && (
+                    <span className="text-ember"> · {currentFilterLabel(activeFilter)}</span>
+                  )}
+                </p>
               </div>
             </div>
           </div>
+
         </div>
       </header>
 
-      {/* Tagline strip — Atlas-style */}
-      <div className="bg-ink text-cream py-2.5">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-10 flex items-center justify-between text-[11px] tracking-[0.18em] uppercase">
-          <span className="opacity-70">A portfolio operating system</span>
-          <span className="opacity-70 hidden md:inline">
-            Each project · is a proof point · built work across WNC
-          </span>
-          <span className="opacity-70">Dröm Construction</span>
+      {/* Subtle stats strip — info without weight */}
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-10 pt-5">
+        <div className="flex items-center gap-4 text-[11px] flex-wrap">
+          {[
+            { label: "completed", value: visibleProjects.filter(p => p.status === "completed").length },
+            { label: "current build", value: visibleProjects.filter(p => p.status === "under-construction").length, accent: true },
+            { label: "closed", value: visibleProjects.filter(p => p.status === "closed").length },
+            { label: "needs confirmation", value: visibleProjects.filter(p => p.status === "needs-confirmation" || p.source_confidence === "low").length },
+          ].filter(s => s.value > 0).map((s, i) => (
+            <span key={s.label} className="flex items-center gap-1.5">
+              {i > 0 && <span className="text-ink/15">·</span>}
+              <span className={`font-serif text-lg leading-none ${s.accent ? "text-ember" : "text-ink"}`}>
+                {s.value}
+              </span>
+              <span className="label-caps text-stone">{s.label}</span>
+            </span>
+          ))}
         </div>
-      </div>
-
-      {/* Stats */}
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-10 pt-6">
-        <StatsBar projects={visibleProjects} filtered={filtered} />
       </div>
 
       {/* Controls row */}
@@ -208,18 +236,13 @@ export default function FieldGuideShell({ data }: Props) {
 
       {/* Index */}
       <section className="max-w-[1440px] mx-auto px-6 lg:px-10 pt-10 pb-20">
-        <div className="flex items-end justify-between gap-4 border-b border-ink/15 pb-3 mb-6">
-          <div>
-            <p className="label-caps text-stone">The Index</p>
-            <h2 className="font-serif text-3xl text-ink mt-1">
-              <span className="italic-accent">{filtered.length}</span> project
-              {filtered.length === 1 ? "" : "s"}
-              <span className="text-stone"> · </span>
-              <span className="text-stone text-xl font-sans not-italic">
-                {currentFilterLabel(activeFilter)}
-              </span>
-            </h2>
-          </div>
+        <div className="flex items-center justify-between gap-4 border-b border-ink/15 pb-3 mb-6">
+          <p className="label-caps text-stone">
+            The Index
+            {activeFilter !== "all" && (
+              <span className="text-ember"> · {currentFilterLabel(activeFilter)}</span>
+            )}
+          </p>
         </div>
 
         {filtered.length === 0 ? (
@@ -245,12 +268,18 @@ export default function FieldGuideShell({ data }: Props) {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-ink/10 py-8">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-10 flex items-center justify-between text-stone text-[11px] label-caps">
-          <span>Dröm Construction · Field Guide</span>
-          <span className="font-serif italic not-italic-tracking text-sm normal-case tracking-normal">
-            Built work across <span className="italic-accent">Western North Carolina</span>.
+      <footer className="border-t border-ink/10 py-6">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-10 flex items-center justify-between gap-4 flex-wrap">
+          <span className="font-serif italic text-stone text-sm">
+            Each project is a proof point.
           </span>
+          <div className="flex items-center gap-4 label-caps text-[10px] text-mist">
+            <span>Updated {data.meta.last_updated}</span>
+            <span>·</span>
+            <span>Dröm Construction</span>
+            <span>·</span>
+            <span>Photos by Andy Wickstrom</span>
+          </div>
         </div>
       </footer>
 
