@@ -1,15 +1,15 @@
 {
   "meta": {
     "project": "drom-field-guide",
-    "version": "0.1",
-    "last_updated": "2026-05-22",
+    "version": "0.2",
+    "last_updated": "2026-05-23",
     "description": "Interactive portfolio explorer for Dröm Construction projects across Asheville and Western North Carolina."
   },
   "projects": [
     {
-      "id": "leos-house-of-thirst",
-      "name": "Leo's House of Thirst",
-      "alternate_names": ["Leo's Wine Bar"],
+      "id": "leos-wine-bar",
+      "name": "Leo's Wine Bar",
+      "alternate_names": ["Leo's House of Thirst"],
       "address": "1055 Haywood Rd, Asheville, NC",
       "city": "Asheville",
       "state": "NC",
@@ -43,7 +43,10 @@
       "source_confidence": "high",
       "website": null,
       "instagram": null,
-      "image_urls": []
+      "image_urls": [
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693275564276-EAYA3TG0OSQAV3UJPC81/2022_Drom_Leos-122.jpg",
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693275565943-A2OESDQ77J3GXFWZ9DG8/2022_Drom_Leos-247.jpg"
+      ]
     },
     {
       "id": "there-there",
@@ -56,10 +59,10 @@
       "corridor": "river-arts-district",
       "lat": 35.5829,
       "lng": -82.5660,
-      "status": "completed",
+      "status": "closed",
       "visibility": "prospect-safe",
       "featured": true,
-      "public_visit": true,
+      "public_visit": false,
       "sector": "hospitality",
       "project_type": "restaurant-commercial-upfit",
       "categories": ["hospitality", "restaurant-bar", "commercial-upfit", "river-arts-district"],
@@ -77,11 +80,14 @@
       ],
       "buyer_signal": "Anchors Dröm's presence in the River Arts District with a design-conscious hospitality build.",
       "public_summary": "A hospitality space in the River Arts District showing Dröm's ability to work within Asheville's creative corridors.",
-      "internal_notes": "Request final Dröm approval on public-facing language before external use.",
+      "internal_notes": "Venue has since closed. Dröm scope and build quality still fully relevant as a portfolio reference.",
       "source_confidence": "high",
       "website": null,
       "instagram": null,
-      "image_urls": []
+      "image_urls": [
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1711042163086-X1CP9C0T6BZ8JN2OQERN/2023-drom-there-there-061.jpg",
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1711042164171-WHNZVMCQ0KFXRBMKP9XF/2023-drom-there-there-026.jpg"
+      ]
     },
     {
       "id": "rowan-coffee",
@@ -120,7 +126,10 @@
       "source_confidence": "medium",
       "website": null,
       "instagram": null,
-      "image_urls": []
+      "image_urls": [
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693277395332-8PXHH33RSFLOE41L0SGK/2022_Dro%CC%88m_RowansCoffee-27-HDR.jpg",
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693277396847-VQMRDZFFJL5NH39EV5A6/2022_Dro%CC%88m_Rowans-30.jpg"
+      ]
     },
     {
       "id": "golden-pineapple",
@@ -158,7 +167,174 @@
       "source_confidence": "medium",
       "website": null,
       "instagram": null,
-      "image_urls": []
+      "image_urls": [
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693276787453-QEEED7MARCLC7Q6R6QYY/2022_Drom_GoldenPineapple-160.jpg",
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693276784245-ZZSIDVTV53A3FN9OWNYD/2022_Drom_GoldenPineapple-57-Edit.jpg"
+      ]
+    },
+    {
+      "id": "piezaa",
+      "name": "PIE.ZAA",
+      "alternate_names": ["Pie Zaa"],
+      "address": "46 Millard Ave, Asheville, NC",
+      "city": "Asheville",
+      "state": "NC",
+      "neighborhood": "South Slope",
+      "corridor": "downtown-asheville",
+      "lat": 35.5718,
+      "lng": -82.5425,
+      "status": "completed",
+      "visibility": "prospect-safe",
+      "featured": true,
+      "public_visit": true,
+      "sector": "hospitality",
+      "project_type": "restaurant-commercial-upfit",
+      "categories": ["hospitality", "restaurant-bar", "commercial-upfit"],
+      "drom_scope": ["construction", "commercial up-fit"],
+      "capabilities_shown": [
+        "hospitality buildout",
+        "commercial up-fit",
+        "South Slope context",
+        "finish detail"
+      ],
+      "prospect_relevance": [
+        "restaurant owner",
+        "hospitality operator",
+        "South Slope property owner"
+      ],
+      "buyer_signal": "Shows Dröm's range beyond Haywood Road into the South Slope hospitality corridor.",
+      "public_summary": "A restaurant build in Asheville's South Slope neighborhood demonstrating Dröm's cross-corridor reach.",
+      "internal_notes": "Confirm final scope and public language with Brian before prospect use.",
+      "source_confidence": "high",
+      "website": null,
+      "instagram": null,
+      "image_urls": [
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693277139862-42RKJ9Z4MCQ7C77U7U1R/2022_Dro%CC%88m_PieZaa-232-HDR.jpg",
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693277139717-YZ6WUNYEVCGEMK8KY3PF/2022_Dro%CC%88m_PieZaa-177.jpg"
+      ]
+    },
+    {
+      "id": "wagbar",
+      "name": "Wagbar",
+      "alternate_names": [],
+      "address": "320 Merrimon Ave, Asheville, NC",
+      "city": "Asheville",
+      "state": "NC",
+      "neighborhood": "North Asheville",
+      "corridor": "unknown",
+      "lat": 35.6190,
+      "lng": -82.5552,
+      "status": "completed",
+      "visibility": "prospect-safe",
+      "featured": false,
+      "public_visit": true,
+      "sector": "hospitality",
+      "project_type": "bar-commercial-upfit",
+      "categories": ["hospitality", "restaurant-bar", "commercial-upfit"],
+      "drom_scope": ["construction", "commercial up-fit"],
+      "capabilities_shown": [
+        "hospitality buildout",
+        "commercial up-fit",
+        "North Asheville context",
+        "finish detail"
+      ],
+      "prospect_relevance": [
+        "bar owner",
+        "hospitality operator",
+        "North Asheville property owner"
+      ],
+      "buyer_signal": "Extends Dröm's hospitality portfolio into North Asheville's Merrimon corridor.",
+      "public_summary": "A hospitality build on Merrimon Ave demonstrating Dröm's reach across Asheville neighborhoods.",
+      "internal_notes": "Confirm final scope and approval language with Brian.",
+      "source_confidence": "high",
+      "website": null,
+      "instagram": null,
+      "image_urls": [
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693277913006-L1KR4VQPS6OBHM4HM5AM/2022_Dro%CC%88m_Wagbar-57-HDR.jpg",
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693277912532-NZ7PAMMUGPXUDQN5PQAR/2022_Dro%CC%88m_Wagbar-7-HDR.jpg"
+      ]
+    },
+    {
+      "id": "dobra-tea-east",
+      "name": "Dobra Tea East",
+      "alternate_names": ["Dobra Tea"],
+      "address": "1011 Tunnel Rd, Asheville, NC",
+      "city": "Asheville",
+      "state": "NC",
+      "neighborhood": "East Asheville",
+      "corridor": "unknown",
+      "lat": 35.5758,
+      "lng": -82.5053,
+      "status": "completed",
+      "visibility": "prospect-safe",
+      "featured": false,
+      "public_visit": true,
+      "sector": "coffee",
+      "project_type": "cafe-commercial-upfit",
+      "categories": ["hospitality", "coffee", "commercial-upfit"],
+      "drom_scope": ["construction", "commercial up-fit"],
+      "capabilities_shown": [
+        "cafe buildout",
+        "commercial up-fit",
+        "East Asheville context",
+        "atmospheric space"
+      ],
+      "prospect_relevance": [
+        "cafe founder",
+        "coffee shop operator",
+        "East Asheville property owner",
+        "hospitality operator"
+      ],
+      "buyer_signal": "Demonstrates Dröm's ability to deliver a distinctive cafe environment outside the core Haywood corridor.",
+      "public_summary": "A tea house build in East Asheville showing Dröm's craft in atmospheric small-footprint hospitality.",
+      "internal_notes": "Confirm final scope and approval language with Brian.",
+      "source_confidence": "high",
+      "website": null,
+      "instagram": null,
+      "image_urls": [
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1711041894923-A0O0ZO9V3Z0EJWRUWDU4/2023-drom-dobra-tea-east-015.jpg",
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1711041890698-NE6Q8V012CFBOITNQIXY/2023-drom-dobra-tea-east-010.jpg"
+      ]
+    },
+    {
+      "id": "private-residence-asheville",
+      "name": "Private Residence",
+      "alternate_names": [],
+      "address": "Asheville, NC",
+      "city": "Asheville",
+      "state": "NC",
+      "neighborhood": null,
+      "corridor": "unknown",
+      "lat": null,
+      "lng": null,
+      "status": "completed",
+      "visibility": "internal-review",
+      "featured": false,
+      "public_visit": false,
+      "sector": "residential",
+      "project_type": "residential-renovation",
+      "categories": ["residential"],
+      "drom_scope": ["construction", "residential renovation"],
+      "capabilities_shown": [
+        "residential construction",
+        "high-end finish work",
+        "custom millwork"
+      ],
+      "prospect_relevance": [
+        "homeowner",
+        "residential developer",
+        "architect seeking residential builder"
+      ],
+      "buyer_signal": "Shows Dröm's capability beyond hospitality — high-end residential craft and finish quality.",
+      "public_summary": "",
+      "internal_notes": "Residential project — internal use only. Confirm with Brian whether any version of this is prospect-safe.",
+      "source_confidence": "high",
+      "website": null,
+      "instagram": null,
+      "image_urls": [
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693316049872-QI8RRG94MJV79X9055CY/2022-drom-bill-oconnell-residence-232-Edit.jpg",
+        "https://images.squarespace-cdn.com/content/v1/62169e9ead66f2660e91a88c/1693316049570-Q232TD8CXZJSOAAVW1L4/2022-drom-bill-oconnell-residence-200.jpg"
+      ]
     },
     {
       "id": "pho-haus",

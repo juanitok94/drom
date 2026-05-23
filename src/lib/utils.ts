@@ -2,6 +2,7 @@ import type { Corridor, Project, ProjectStatus, Sector } from "@/types/project";
 
 export const STATUS_LABELS: Record<ProjectStatus, string> = {
   completed: "Completed",
+  closed: "Closed",
   "under-construction": "Current Build",
   "in-design": "In Design",
   "needs-confirmation": "Needs Confirmation",
@@ -9,6 +10,7 @@ export const STATUS_LABELS: Record<ProjectStatus, string> = {
 
 export const STATUS_TONE: Record<ProjectStatus, string> = {
   completed: "bg-bone text-ink border-ink/15",
+  closed: "bg-stone/20 text-stone border-stone/30",
   "under-construction": "bg-ember/10 text-ember border-ember/30",
   "in-design": "bg-brass/15 text-brass border-brass/40",
   "needs-confirmation": "bg-mist/20 text-stone border-stone/30",
@@ -100,6 +102,11 @@ export const FILTERS: { id: string; label: string; predicate: (p: Project) => bo
       id: "rad",
       label: "River Arts District",
       predicate: (p) => p.corridor === "river-arts-district",
+    },
+    {
+      id: "closed",
+      label: "Closed Venues",
+      predicate: (p) => p.status === "closed",
     },
     {
       id: "needs-confirmation",

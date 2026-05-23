@@ -9,7 +9,6 @@ import ModeToggle from "./ModeToggle";
 import ProjectCard from "./ProjectCard";
 import ProjectDrawer from "./ProjectDrawer";
 import SearchInput from "./SearchInput";
-import StatsBar from "./StatsBar";
 import StylizedMap from "./StylizedMap";
 
 // Leaflet must be client-only (touches `window`)

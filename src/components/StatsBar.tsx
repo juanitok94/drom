@@ -9,6 +9,7 @@ interface Props {
 
 export default function StatsBar({ projects, filtered }: Props) {
   const completed = projects.filter((p) => p.status === "completed").length;
+  const closed = projects.filter((p) => p.status === "closed").length;
   const current = projects.filter((p) => p.status === "under-construction").length;
   const needsConf = projects.filter(
     (p) => p.status === "needs-confirmation" || p.source_confidence === "low"
@@ -18,13 +19,14 @@ export default function StatsBar({ projects, filtered }: Props) {
   const stats = [
     { label: "Showing", value: filtered.length, total: projects.length },
     { label: "Completed", value: completed },
+    { label: "Closed", value: closed, accent: "stone" },
     { label: "Current Builds", value: current, accent: "ember" },
     { label: "Needs Confirmation", value: needsConf, accent: "stone" },
     { label: "Featured", value: featured },
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-ink/10 border border-ink/10">
+    <div className="grid grid-cols-2 md:grid-cols-6 gap-px bg-ink/10 border border-ink/10">
       {stats.map((s) => (
         <div key={s.label} className="bg-cream px-4 py-3">
           <div className="label-caps text-stone">{s.label}</div>
